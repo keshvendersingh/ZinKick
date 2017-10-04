@@ -1,0 +1,66 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title">
+				Software Industry 0817
+			</h3>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<!--Begin::Main Portlet-->
+	<div class="row">
+		<div class="col-xl-12">
+		<!--begin::Portlet-->
+		<div class="m-portlet">
+			<div class="m-portlet__head">
+				<div class="m-portlet__head-caption">
+					<div class="m-portlet__head-title">
+						<h3 class="m-portlet__head-text">
+							Build List
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="m-portlet__body">
+				<!--begin::Section-->
+				<div class="m-section">
+					<div class="m-section__content">
+						<table class="table m-table m-table--head-no-border">
+							<thead>
+								<tr>
+									<th>
+										ID
+									</th>
+									<th>
+										File Name
+									</th>
+									<th>
+										Total Record
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let row of rows">
+									<td>{{row.Id}}</td>
+									<td>{{row.file_name}}</td>
+									<td>{{row.records_count}}</td>
+								<tr>
+							</tbody>
+						</table>
+						<div class="text-right">
+							<a [routerLink]="['/csv']" class="btn btn-success m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air"><i class="fa fa-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<!--end::Section-->
+				
+			</div>
+		</div>
+		<!--end::Portlet-->
+		</div>
+	</div>
+	<!--End::Main Portlet-->
+</div>
